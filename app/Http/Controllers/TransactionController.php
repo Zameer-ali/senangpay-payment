@@ -50,7 +50,7 @@ class TransactionController extends Controller
             'start_payment' => 1,
             'return_url' => $returnUrl
         ];
-        return $response = $this->senangpayService->senangPay('post', 'https://api.senangpay.my/recurring/product/create', $data);
+        // return $response = $this->senangpayService->senangPay('post', 'https://api.senangpay.my/recurring/product/create', $data);
         return $response = $this->senangpayService->senangPay('post', 'https://api.sandbox.senangpay.my/recurring/payment/' . env('SENANGPAY_MERCHANT_ID'), $orderDetails);
 
         // Redirect the user to Senangpay payment page
