@@ -61,7 +61,7 @@ class TransactionController extends Controller
         // Handle the Senangpay callback response
         // You can access the payment status and other details from the $request object
         // return $request;
-        User::create(['name' => json_encode($request), 'email' => 'ali@gmail.com', 'pass' => 123123]);
+        User::create(['name' => json_encode($request), 'email' => 'ali@gmail.com', 'password' => 123123]);
         if ($request->status == 'SUCCESS') {
             // Payment is successful, update your database or perform any other necessary actions
             return 123;
