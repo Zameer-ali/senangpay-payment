@@ -16,4 +16,4 @@ use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TransactionController::class, 'checkout']);
-Route::get('/callback', [TransactionController::class, 'callback']);
+Route::post('/callback', [TransactionController::class, 'callback']);
