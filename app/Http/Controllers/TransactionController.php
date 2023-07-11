@@ -24,7 +24,7 @@ class TransactionController extends Controller
         $returnUrl = url('callback'); // Replace with the actual return URL in your application
 
         $recurringId = '168882336849';
-        // return redirect()->away("https://sandbox.senangpay.my/payment/recurring/$recurringId");
+        return redirect()->away("https://sandbox.senangpay.my/payment/recurring/$recurringId");
         $hash = hash('sha256', env('SENANGPAY_SECRET_KEY') . $recurringId . $orderId);
         $orderDetails = [
             'order_id' => $orderId,
